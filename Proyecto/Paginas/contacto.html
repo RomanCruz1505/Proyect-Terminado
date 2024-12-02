@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../Estilos/contacto.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Futbol para la gente - Contacto</h1>
+        <p>Estamos aquí para ayudarte. Contáctanos para cualquier duda, sugerencia o colaboración.</p>
+    </header>
+    
+    <section class="contact-info">
+        <h2>Información de Contacto</h2>
+        <p><strong>Nombre:</strong> Roman Cruz</p>
+        <p><strong>Teléfono:</strong> <a href="tel:+523338212933">3338212933</a></p>
+        <p><strong>Correo:</strong> <a href="mailto:romanacm07@gmail.com">romanacm07@gmail.com</a></p>
+    </section>
+
+    <section class="form-section">
+        <h2>Envíanos un Mensaje</h2>
+        <!-- Cambiado el atributo action para apuntar a "procesar_mensaje.php" -->
+        <form action="procesar_mensaje.php" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+            <button onclick="window.location.href='gestionar_mensajes.php'">
+                Ver Mensajes
+            </button>
+            
+        </form>
+    </section>
+</body>
+
+</html>

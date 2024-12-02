@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../Estilos/styles..css">
+</head>
+<body>
+
+    <!-- Navbar Principal -->
+    <header class="navbar">
+        <div class="logo">Futbol para la gente</div>
+        <input type="text" id="buscador" placeholder="Buscar..." onkeyup="filtrar()">
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>              
+                <li><a href="ligas.html">Ligas Mas Importantes</a></li>
+                <li><a href="liga_mx.html">Liga MX</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <!-- Main Section -->
+    <main>
+        <!-- Sección 1 -->
+        <section id="seccion1">
+            <h2>¿Qué es Futbol para la gente</h2>
+            <p>El Proyecto Deportivo nace con la intención de ofrecer una plataforma integral que brinde contenido deportivo de alta calidad, accesible para todos los aficionados al deporte. Nuestra misión es proveer a los usuarios con información actualizada sobre ligas deportivas, análisis de partidos, estadísticas detalladas, noticias de última hora, y un sinfín de recursos educativos para mejorar el conocimiento y disfrute del deporte.</p>
+
+            <p>Contamos con un equipo de expertos que constantemente se dedica a generar contenido exclusivo, basado en datos verificables y de gran relevancia. Con esta iniciativa buscamos contribuir a que más personas se interesen por el deporte, y que aquellos que ya son aficionados tengan una fuente confiable y continua de información. Nuestro enfoque es ofrecer un contenido claro, accesible y diverso que cubra una amplia gama de deportes a nivel mundial.</p>
+
+            <p>Desde los deportes más populares como el fútbol, el baloncesto y el tenis, hasta deportes menos cubiertos en los medios tradicionales, nuestro objetivo es ser una plataforma donde todos los aficionados, sin importar sus intereses, puedan encontrar lo que buscan.</p>
+        </section>
+
+        <!-- Sección 2 -->
+        <section id="seccion2">
+            <h2>Propósito de la Página</h2>
+            <p>El propósito de esta página es proporcionar un espacio dinámico y actualizado donde los aficionados al deporte puedan estar al día con los eventos más importantes del mundo deportivo. A través de una interfaz intuitiva y moderna, buscamos ofrecer no solo las últimas noticias y resultados, sino también análisis profundos sobre equipos, jugadores y competiciones.</p>
+
+            <p>Además de servir como fuente de información, nuestra página tiene la intención de crear una comunidad activa de usuarios apasionados por el deporte. A través de comentarios, foros de discusión y la posibilidad de compartir opiniones y análisis, queremos que nuestros usuarios no solo reciban información, sino que también participen en la creación de contenido y en la interacción con otros miembros de la comunidad.</p>
+
+            <p>En el futuro cercano, planeamos expandir nuestra plataforma para incluir más características como streaming de eventos en vivo, entrevistas con jugadores y expertos, y un sistema interactivo de estadísticas y seguimiento de partidos en tiempo real. Este sitio será un centro de referencia no solo para aquellos que siguen deportes en su tiempo libre, sino para aquellos que los practican profesionalmente o tienen un interés académico por los deportes.</p>
+
+            <p>Además, con el fin de brindar un servicio más completo, estamos trabajando en la integración de diferentes tipos de contenido multimedia, como videos, podcasts y gráficos interactivos que hagan la experiencia de navegación más entretenida y educativa.</p>
+        </section>
+
+        <!-- Sección 3 -->
+        <section id="seccion3">
+            <h2>Visión a Futuro</h2>
+            <p>En los próximos años, nuestra visión es posicionarnos como una de las plataformas más completas en cuanto a contenido deportivo se refiere. Queremos que el Proyecto Deportivo se convierta en una fuente de referencia mundial para obtener información precisa y actualizada sobre cualquier evento deportivo, sin importar su popularidad o alcance global.</p>
+
+            <p>Como parte de esta visión a futuro, planeamos expandir nuestro alcance a nivel internacional, brindando contenido sobre ligas y eventos en todo el mundo. Queremos estar presentes en cada rincón del planeta, cubriendo desde las principales ligas europeas hasta los campeonatos locales en América Latina, Asia y África.</p>
+
+            <p>Además, tenemos la intención de diversificar aún más nuestra oferta de contenido, con el objetivo de atraer a audiencias de todas las edades y procedencias. Esto incluirá el desarrollo de contenido exclusivo para jóvenes, expertos y aficionados que buscan una experiencia más profunda en la información que consumen. En el futuro, nuestra plataforma incluirá áreas dedicadas a deportes emergentes, como los eSports, que están ganando terreno rápidamente entre nuevas generaciones.</p>
+
+            <p>La interacción en tiempo real será uno de los pilares fundamentales de nuestra página, con la creación de herramientas que permitan a los usuarios personalizar su experiencia y seguir a sus equipos y jugadores favoritos. Esto incluirá notificaciones personalizadas, seguimiento de partidos en vivo, análisis de rendimiento y una serie de recursos educativos para aquellos que desean aprender más sobre cada deporte.</p>
+
+            <p>Finalmente, nuestra meta a largo plazo es que el Proyecto Deportivo sea reconocido a nivel mundial como una plataforma de referencia en el ámbito de la información deportiva. Queremos convertirnos en un lugar donde los aficionados puedan encontrar todo lo que necesitan para estar al tanto de las últimas noticias, resultados y análisis de manera rápida y eficiente. Un lugar que, en algún momento, podría compararse con gigantes de la industria como <a href="https://www.espn.com.mx/" target="_blank">ESPN Deportes</a>.</p>
+        </section>
+    </main>
+
+    <!-- Lista de elementos a buscar -->
+    <ul id="lista">
+        <li>Club más importante de liga mx (Chivas)</li>
+        <li>Club más importante de la Premiere League (Manchester United)</li>
+        <li>Club más importante de la Liga (Real Madrid)</li>
+        <li>Club más importante de la Bundesliga (Bayer Munich)</li>
+        <li>Club más importante de Italia (Milan)</li>
+        <li>Club más importante de League One (Paris Saint Germain)</li>
+    </ul>
+  
+    <script>
+        function filtrar() {
+            const input = document.getElementById('buscador').value.toLowerCase();
+            const items = document.getElementById('lista').getElementsByTagName('li');
+
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i];
+                const texto = item.textContent || item.innerText;
+                item.style.display = texto.toLowerCase().includes(input) ? '' : 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+

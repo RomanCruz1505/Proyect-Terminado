@@ -1,0 +1,202 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0044cc;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilos para el enlace del logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 40px; /* Ajusta la altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #003399;
+}
+
+/* Secciones */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section h2 {
+    color: #0044cc;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para el Main */
+main {
+    margin: 2rem 0;
+}
+
+/* Sección 1 */
+#seccion1 {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#seccion1 h2 {
+    color: #0044cc;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#seccion1 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Sección 2 */
+#seccion2 {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#seccion2 h2 {
+    color: #0044cc;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#seccion2 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Sección 3 */
+#seccion3 {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#seccion3 h2 {
+    color: #0044cc;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#seccion3 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Lista de clubes */
+#lista {
+    list-style-type: none;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+#lista li {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#lista li:hover {
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Buscador */
+#buscador {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 1rem;
+    font-size: 1rem;
+    width: 200px;
+}
+
+/* Estilo para enlaces dentro de las secciones */
+a {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #003399;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    #buscador {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+

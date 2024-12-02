@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Estilos/nosotros.css">
+    <title>Nosotros</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+    
+        /* Modo oscuro */
+        body.dark-theme {
+            background-color: #333;
+            color: white;
+        }
+    
+        body.dark-theme header, 
+        body.dark-theme footer,
+        body.dark-theme nav {
+            background-color: #222;
+        }
+    
+        body.dark-theme nav a {
+            color: #ffffff;
+        }
+    
+        body.dark-theme footer {
+            background-color: #111;
+        }
+    
+        body.dark-theme .vision-link {
+            border-color: #ff5733;
+        }
+    
+        /* Estilos para el encabezado */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        /* Estilos para la barra de navegación */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+            padding: 10px 0;
+        }
+    
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        nav a:hover {
+            background-color: #003f7d;
+            border-radius: 5px;
+        }
+    
+        /* Estilos para el contenido principal */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+    
+        /* Estilos para los artículos */
+        article, aside {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+    
+        /* Estilos para el enlace de la visión */
+        .vision-link {
+            display: inline-block;
+            border: 2px solid #ff5733;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+    
+        .vision-link img {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+    
+        .vision-link:hover {
+            transform: scale(1.05);
+        }
+    
+        /* Estilos para el botón de cambio de tema */
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+        /* Mejorar visibilidad del contenido en modo oscuro */
+        body.dark-theme article, 
+        body.dark-theme aside {
+            background-color: #444; /* Fondo más oscuro para artículos y aside */
+        }
+    
+        body.dark-theme article h2,
+        body.dark-theme aside h3 {
+            color: #ffcc00; /* Color brillante para los encabezados en modo oscuro */
+        }
+    
+        body.dark-theme article p, 
+        body.dark-theme aside p {
+            color: #ddd; /* Color más claro para el texto en modo oscuro */
+        }
+    
+        body.dark-theme footer p {
+            color: #fff; /* Texto más claro en el pie de página */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header>
+        <h1>Sobre Nosotros</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="ligas.html">Ligas</a>
+        <a href="liga_mx.html">Liga MX</a>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Nuestra Misión</h2>
+            <p>Este proyecto lo estoy realizando como parte de un trabajo escolar, con el objetivo de fortalecer mis conocimientos
+                en desarrollo web y avanzar en mi crecimiento personal y profesional.</p>
+        </article>
+    
+        <article>
+            <h2>Visión a Futuro</h2>
+            <p>Nuestro objetivo es evolucionar esta página para convertirla en una plataforma informativa similar a ESPN deportes,
+                un sitio de referencia para el mundo deportivo. Aspiramos a ofrecer contenido deportivo de calidad y análisis detallado
+                con la mejor información de fútbol. A continuación les dejaré una imagen con un link que los enviará a la página de ESPN para que
+                observen mi proyecto a un futuro más amplio.
+            </p>
+            <a href="https://www.espn.com.mx/" target="_blank" class="vision-link">
+                <img src="../Recursos/Imagenes/espn1.png" alt="ESPN Deportes">
+            </a>
+        </article>
+    
+        <aside>
+            <h3>Agradecimientos</h3>
+            <p>Quiero expresar mi más sincero agradecimiento a mis amigos y familiares, quienes me brindaron su apoyo
+                incondicional durante el desarrollo de este proyecto. También agradezco a todos aquellos que me motivaron
+                a seguir adelante y a esforzarme por mejorar mis habilidades. Su apoyo ha sido fundamental para la realización de este trabajo.</p>
+        </aside>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Proyecto Escolar - Roman Cruz T/M 4O.</p>
+        <!-- Botón para cambiar tema -->
+        <button id="toggle-theme-btn">Cambiar Tema</button>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleThemeButton = document.getElementById("toggle-theme-btn");
+
+            toggleThemeButton.addEventListener("click", function() {
+                document.body.classList.toggle("dark-theme");
+            });
+        });
+    </script>
+
+</body>
+</html>
